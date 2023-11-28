@@ -14,8 +14,8 @@ export class User implements Mappable {
     this.name = faker.person.firstName();
     // console.log(this.location); // would be null or undefined
     this.location = {
-      lat: faker.location.latitude(),
-      lng: faker.location.longitude(),
+      lat: faker.location.latitude({ min: -75, max: 75 }),
+      lng: faker.location.longitude({ min: -75, max: 75 }),
     };
     console.log(this);
   }

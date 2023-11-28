@@ -18,8 +18,8 @@ export class Company implements Mappable {
     this.companyName = faker.company.name();
     this.catchPhrase = faker.company.catchPhrase();
     this.location = {
-      lat: faker.location.latitude(),
-      lng: faker.location.longitude(),
+      lat: faker.location.latitude({ min: -75, max: 75 }),
+      lng: faker.location.longitude({ min: -75, max: 75 }),
     };
     console.log(this);
   }
